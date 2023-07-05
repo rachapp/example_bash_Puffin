@@ -32,8 +32,8 @@ if [ -f $stderr_file ]; then
 fi
 
 # iterate over the range of numbers
-# create the filename based on the pattern
-for i in {0..100}
+# the output data retrieved from aperp field is stored in stdout.output.txt
+for i in {0..200}
 do
-    python3 /mnt/d/My_python_script/Modified_script/PlotBeamProfile.py f6microns_aperp_${i}.h5 >> $stdout_file 2>> $stderr_file
+    python3 $py_script_directory/PlotBeamProfile.py 6microns_ap_1_P_${i}.h5 >> $stdout_file 2>> $stderr_file
 done
