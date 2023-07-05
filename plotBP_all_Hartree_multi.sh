@@ -63,7 +63,7 @@ for i in {0..200}
 do
     python3 $py_script_directory/PlotBeamProfile.py M1_ap_0_P_${i}.h5 >> $stdout_file 2>> $stderr_file
     python3 $py_script_directory/PlotBeamProfile.py M1R_ap_0_P_${i}.h5 >> $stdout_file2 2>> $stderr_file2
-    python3 $py_script_directory/PlotBeamProfile.py M1R_ap_0_P_${i}.h5 >> $stdout_file3 2>> $stderr_file3
+    python3 $py_script_directory/PlotBeamProfile.py M2_ap_0_P_${i}.h5 >> $stdout_file3 2>> $stderr_file3
 done
 mkdir mirrorOutput
 mv *BeamProfile.png mirrorOutput
